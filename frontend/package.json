@@ -1,0 +1,27 @@
+{
+    "name": "sentinelai-frontend",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@svg-maps/india": "^2.0.0",
+        "@svg-maps/world": "^2.0.0",
+        "@tensorflow-models/coco-ssd": "^2.2.3",
+        "@tensorflow/tfjs": "^4.22.0",
+        "leaflet": "^1.9.4",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "react-svg-pan-zoom": "^3.13.1"
+    },
+    "devDependencies": {
+        "@types/react": "^19.0.0",
+        "@types/react-dom": "^19.0.0",
+        "@vitejs/plugin-react": "^4.3.4",
+        "vite": "^6.0.0"
+    }
+}
