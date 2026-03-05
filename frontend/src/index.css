@@ -1,0 +1,151 @@
+/* ═══════════════════════════════════════════════════════════
+   SentinelAI — Global Design System
+   Based on Stitch tactical dark theme
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+    --primary: #0d7ff2;
+    --bg-dark: #06090e;
+    --surface: #0f172a;
+    --surface-glass: rgba(15, 23, 42, 0.6);
+    --accent-red: #ff3b30;
+    --accent-green: #34c759;
+    --accent-cyan: #00f2ff;
+    --accent-orange: #ff9500;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+#root {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* ── Glass morphism ────────────────────────────── */
+.glass {
+    background: var(--surface-glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+}
+
+/* ── Scanline overlay ──────────────────────────── */
+.scanline {
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.15) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+}
+
+/* ── Scrollbar ─────────────────────────────────── */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+/* ── Material Symbols helper ──────────────────── */
+.icon {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ── Pulse animation ──────────────────────────── */
+@keyframes pulse-ring {
+    0% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2.2);
+        opacity: 0;
+    }
+}
+
+.pulse-ring {
+    animation: pulse-ring 1.5s ease-out infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0.3
+    }
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+/* Leaflet dark popup overrides */
+.leaflet-popup-content-wrapper {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+}
+
+.leaflet-popup-content {
+    margin: 0 !important;
+}
+
+.leaflet-popup-tip {
+    background: #0f172a !important;
+}
+
+.custom-marker {
+    background: none !important;
+    border: none !important;
+}
+
+/* Ensure empty Leaflet maps take up space and blend */
+.leaflet-container {
+    background: #06090e !important;
+    font-family: 'Space Grotesk', system-ui, sans-serif !important;
+    z-index: 10;
+}
+
+.leaflet-control-attribution {
+    background: rgba(15, 23, 42, 0.7) !important;
+    color: var(--text-muted) !important;
+}
+.leaflet-control-attribution a {
+    color: var(--primary) !important;
+}
