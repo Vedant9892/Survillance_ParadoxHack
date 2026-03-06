@@ -184,7 +184,7 @@ function Cam01Map() {
         L.control.zoom({ position: 'bottomright' }).addTo(map);
         mapInst.current = map;
 
-        // Force recalculation of map size after container is laid out
+
         setTimeout(() => { map.invalidateSize(); }, 200);
 
         return () => { map.remove(); mapInst.current = null; };
