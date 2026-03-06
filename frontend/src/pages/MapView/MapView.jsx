@@ -2,6 +2,8 @@ import { useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
+// map used from https://leafletjs.com/examples/custom-icons/ with custom styling for live/alert status and popups showing feed preview and details. The CAMS array is hardcoded for demo purposes but can be fetched from an API in a real application.
+
 const CAMS = [
     { id: 'CAM-01', name: 'LIVE CAMERA', status: 'live', lat: 19.0440, lng: 73.0290 },
     { id: 'CAM-02', name: 'MARKET - PANVEL', status: 'alert', lat: 18.991296, lng: 73.115834 },
